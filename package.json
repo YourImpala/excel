@@ -1,0 +1,19 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "description": "Pure JS Excel Application",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YourImpala/excel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YourImpala/excel/issues"
+  },
+  "homepage": "https://github.com/YourImpala/excel#readme"
+}
