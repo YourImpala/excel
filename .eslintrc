@@ -10,7 +10,10 @@
     "arrow-parens": "off",
     "require-jsdoc": "off",
     "linebreak-style": "off",
-    "eol-last": "off"
+    "eol-last": "off",
+    "indent": "off",
+    "quotes": "off",
+    "operator-linebreak": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
