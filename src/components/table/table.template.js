@@ -14,13 +14,13 @@ export function createTable(rowsCount = 15) {
 
     rows.push(createRow(null, cols));
 
-    for (let i = 0; i < rowsCount; i += 1) {
+    for (let row = 0; row < rowsCount; row += 1) {
         const cells = new Array(colsCount)
             .fill('')
-            .map(toCell)
+            .map(toCell(row))
             .join('')
 
-        rows.push(createRow(i + 1, cells));
+        rows.push(createRow(row + 1, cells));
     }
 
     return rows.join('');
@@ -48,10 +48,18 @@ function toColumn(colName, index) {
             </div>`;
 }
 
-function toCell(_, colIndex) {
-    return `
-        <div class="cell" contenteditable data-col="${colIndex}"></div>
+function toCell(rowIndex) {
+    return function(_, colIndex) {
+        return `
+        <div 
+            class="cell" 
+            contenteditable 
+            data-col="${colIndex}" 
+            data-type="cell"
+            data-id="${rowIndex}:${colIndex}"
+         ></div>
     `;
+    }
 }
 
 function toChar(_, index) {
