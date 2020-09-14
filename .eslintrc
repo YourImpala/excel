@@ -13,7 +13,15 @@
     "eol-last": "off",
     "indent": "off",
     "quotes": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "max-len": "off"
   },
-  "extends": ["eslint:recommended", "google"]
+  "extends": [
+    "eslint:recommended",
+    "google"
+   // "plugin:security/recommended"
+  ]
+//  "plugins": [
+//    "security"
+//  ]
 }
