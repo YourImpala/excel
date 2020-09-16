@@ -22,12 +22,12 @@ export class ExcelComponent extends DOMListener {
   }
 
   $emit(event, ...args) {
-    const unsub = this.emitter.emit(event, ...args);
-    this.unsubscribers.push(unsub);
+    this.emitter.emit(event, ...args);
   }
 
   $on(event, fn) {
-    this.emitter.subscribe(event, fn);
+    const unsub = this.emitter.subscribe(event, fn);
+    this.unsubscribers.push(unsub);
   }
 
   $dispatch(action) {
