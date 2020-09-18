@@ -3,7 +3,8 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "rules": {
     "semi": "off",
@@ -20,8 +21,9 @@
     "eslint:recommended",
     "google"
    // "plugin:security/recommended"
-  ]
-//  "plugins": [
+  ],
+  "plugins": [
+      "jest"
 //    "security"
-//  ]
+  ]
 }
